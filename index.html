@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title> Teacher Mav </title>
+<link rel="icon"
+href="Mav.jpg"
+type="image/x-icon">
+<style>
+.container {
+    display: flex;
+    width: 100%;
+}
+
+article {
+    padding: 20px;
+    width: 70%;
+    background-color: lightpink;
+    min-height: 300px;
+}
+article {
+    padding: 25px 30px;
+    width: 70%;
+    background: linear-gradient(135deg, #ffb6b6, #ff7f7f); 
+    min-height: 300px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); 
+    border-left: 8px solid #ff4f4f; 
+    border-radius: 12px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+article:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3); 
+}
+
+
+.sidebar {
+    width: 27%;
+    background: lightpink;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar ul li a:hover {
+    background: lightpink;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 10px;             
+    background-color: #ffb6b6;       
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;       
+    border-left: 6px solid transparent;  
+}
+
+.sidebar ul li a:hover {
+    background-color: #ff8f8f;       
+    color: white;
+    border-left: 6px solid #ff4f4f;  
+    transform: translateX(5px);    
+}
+
+
+ul.nav {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #FF7F7F; 
+    text-align:center;
+    font-size:50px;
+}
+
+ul.nav li a {
+    display: block;
+    color: white;
+    padding: 20px 21px;
+    text-decoration: none;
+    text-align:center;
+    font-size:5ppx;
+}
+
+ul.nav li a:hover {
+    background-color: lightpink;
+    color: black;
+    text-align:center;
+    font-size:50px;
+}
+
+ul.nav li {
+    margin: 10px;
+}
+
+ul.nav li a {
+    background-color: #ff9a9a;
+    border-radius: 50px;      /* pill shape */
+    padding: 20px 35px;
+    transition: all 0.3s ease;
+}
+
+ul.nav li a:hover {
+    background-color: lightpink;
+    color: black;
+    transform: scale(1.05);
+}
+
+
+header {
+    background-color: pink;
+    padding: 5px;
+    text-align: center;
+    font-size: 80px;
+    color: white;
+}
+
+footer {
+    background-color: pink;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+
+
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+li a, .dropbtn {
+display: inline-block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+background-color: pink;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: white;
+min-width: 160px;
+}
+.dropdown-content a {
+color: white;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover {background-color:
+lightred;}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+</style>
+</head>
+
+<body>
+<header>
+ <h1 style="font-size: 70px;">ICT ako, SMART ako!</h1>
+<h1 style="font-size: 70px;"> LEARN WITH TEACHER MAVIC </h1>
+ <h1 style="font-size: 55px;"> Conversion of Computer Number Systems </h1>
+</header>
+
+<ul class="nav">
+<li class="dropdown">
+<a href="javascript:void(0)"class="dropbtn">Home</a>
+<div class="dropdown-content">
+<a href="mission.html">Mission</a>
+<a href="Vision.html">Vision</a>
+<a href="Core.html">Core Values</a>
+</div>
+<li>
+<a href="Activities.pptx">Activities</a></li>
+<li class="dropdown">
+<a href="javascript:void(0)"class="dropbtn">Assessment</a>
+<div class="dropdown-content">
+<a href="Assessment.html">Pre-test</a>
+<a href="Long test.html">Long Test</a>
+<a href="answer key.html">Answer key</a>
+</li>
+<li class="dropdown">
+<a href="javascript:void(0)"class="dropbtn">About</a>
+<div class="dropdown-content">
+<a href="https://www.facebook.com/share/14XVKrvXnbi/">Chloe Balmaceda</a>
+<a href="https://www.facebook.com/share/1DASSt3K6X/">Bernice Reyna</a>
+<a href="https://www.facebook.com/share/1DDka3zAge/">Mikaela Bobis</a>
+<a href="https://www.facebook.com/share/1CsE9SYP13/">Anne Jyrille Marasigan</a>
+<a href="https://www.facebook.com/share/1CyVXWJF3p/">Kristine Santillan</a>
+</div>
+</ul>
+
+<section>
+
+<div class="container">
+    <nav class="sidebar">
+  <ul>
+    <li style="font-size:50px"> <a href="#" onclick="loadContent('home')">Content</a> </li>
+    <li style="font-size:50px"> <a href="#" onclick="loadContent('Performance')">Performance Standard</a> </li>
+    <li style="font-size:50px"> <a href="#" onclick="loadContent('Content')">Content Standard</a> </li>
+<li style="font-size:50px"> <a href="#" onclick="loadContent('Learning')">Learning Competencies</a> </li>
+<li style="font-size:50px"> <a href="#" onclick="loadContent('Objectives')">Objectives</a> </li>
+  </ul>
+</nav>
+
+ <article id="content">
+<h3 style="font-size:70px">What is Conversion of Computer Number Systems?</h3>
+<marquee direction="left">
+<img src="z.gif" width="300px" height="250px"> 
+<img src="0.gif" width="300px" height="250px">
+<img src="z.gif" width="300px" height="250px"> 
+<img src="0.gif" width="300px" height="250px">
+<img src="z.gif" width="300px" height="250px">
+<img src="z.gif" width="300px" height="250px"> 
+</marquee>
+</article>
+</div>
+</section>
+
+<footer>
+  <p style="font-size:45px"> ©Fourth Year Students Batch 2025-2026</p>
+</footer>
+
+<script>
+function loadContent(section) {
+const content = document.getElementById('content');
+if (section === 'home') {
+        content.innerHTML = `
+  <h1 style="font-size:50px"><marquee direction="up">Content</marquee></h1>
+ <p style="font-size:45px">Computer Number Systems are ways of representing numbers in a format that computers can understand and process.</p><h1 style="font-size:45px"> binary, decimal, octal, and hexadecimal</h1>
+<p style="font-size:45px"> and the principles and processes involved in converting numbers from one number system to another for use in computing and digital technologies.
+</p>
+<img src="binary.jpg" width="320px" height="250px">
+<img src="decimal.jpg" width="320px" height="250px">
+<img src="octal.jpg" width="320px" height="250px">
+<img src="hexadecimal.jpg" width="320px" height="250px">
+
+
+ `;
+}
+
+else if (section === 'Performance') {
+content.innerHTML = `
+ <h2 style="font-size:50px"> <marquee direction="up">Performance Standard</marquee> </h2>
+ <p style="font-size:45px">The learner accurately converts numbers among different computer number systems-decimal, binary,
+ octal, and hexadecimal-and applies
+these conversions to solve real-life 
+and computer-related problems with
+ clarity, accuracy, and logical reasoning.</p>
+<img src="study.jpg" width="400px" height="250px">
+<img src="rise.jpg" width="400px" height="250px">
+<img src="one.jpg" width="400px" height="250px">
+ `;
+}
+
+
+            
+ else if (section === 'Content') {
+        content.innerHTML = `
+  <h2 style="font-size:50px"><marquee direction="up">Content Standard</marquee></h2> 
+<p style="font-size:45px">The learner demonstrates understanding of the
+ concepts, principles, and processes
+ involved in the conversion of numbers
+ among decimal, binary, octal, and
+ hexadecimal number systems and their importance in computer systems.
+</p>
+<h1 style="font-size:50px">PowerPoint Presentations</h1>
+<h3 style="font-size:40px"><a href="Introduction.docx" style="text-decoration:none; color:white;">
+  Introduction & Guide</a> </h3>
+<h3 style="font-size:40px"><a href="com2.pptx" style="text-decoration:none; color:white;">
+  PPTX_2
+</a></h3>
+<h3 style="font-size:40px"><a href="com3.pptx" style="text-decoration:none; color:white;">
+  PPTX_3
+</a></h3>
+<h3 style="font-size:40px"><a href="com4.pptx" style="text-decoration:none; color:white;">
+  PPTX_4
+</a></h3>
+<h3 style="font-size:40px"><a href="com5.pptx" style="text-decoration:none; color:white;">
+  PPTX_5
+</a></h3>
+<h3 style="font-size:40px"><a href="com6.pptx" style="text-decoration:none; color:white;">
+  PPTX_6
+</a></h3>
+`;
+}
+
+
+ else if (section === 'Learning') {
+        content.innerHTML = `
+  <h2 style="font-size:40px"><marquee direction="up">Learning Competencies</marquee></h2> 
+<p style="font-size:35px"> By the end of the lesson, the learner should be able to:<br>
+<br>
+1. Identify the different number systems used in computing: decimal, binary, octal, and hexadecimal.<br>
+<br>
+2. Explain the base value and structure of each number system.<br>
+<br>
+3. Convert numbers from decimal to binary, octal, and hexadecimal accurately.<br>
+<br>
+4. Convert numbers from binary, octal, and hexadecimal to decimal accurately.<br>
+<br>
+5. Perform conversions between binary, octal, and hexadecimal without using decimal as an intermediary.<br>
+<br>
+6. Apply number system conversions to basic computing tasks, such as representing data in digital systems.<br>
+<br>
+7. Demonstrate logical steps and verify accuracy in all conversions<br></p>
+`;
+}
+
+
+else if (section === 'Objectives') {
+        content.innerHTML = `
+  <h2 style="font-size:50px"><marquee direction="up">Objectives</marquee></h2> 
+<p style="font-size:45px">
+The learner should be able to 
+identify and describe different
+ number systems,convert numbers
+ accurately between decimal, binary,
+ octal, and hexadecimal, perform
+ conversions between non-decimal
+ systems, explain the steps clearly, and 
+ apply conversions in basic 
+computing tasks.</p>
+        `;
+    }
+}
+
+</script>
+
+</body>
+</html>
