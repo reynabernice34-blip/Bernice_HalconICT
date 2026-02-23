@@ -1,124 +1,39 @@
-<!DOCTYPE html>
-
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<h1>ICT DROP & DRAG PUZZLE </h1>
+<title>e-Portfolio</title>
+<link rel="icon"
+href="me cute.jpg"
+type="image/x-icon">
+</head>
 <style>
-body { font-family:Arial; text-align:center; background:#1565c0; color:white; margin:0; padding:10px;}
-h2,h3 {margin:5px;}
-#score {margin-bottom:10px;}
-#items, #categories {display:flex; justify-content:center; flex-wrap:wrap; margin:10px;}
-.item {background:#42a5f5; padding:10px; margin:5px; border-radius:8px; cursor:pointer; user-select:none;}
-.category {background:#29b6f6; width:120px; height:80px; margin:5px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:bold; position:relative;}
-#popup {position:fixed; top:30%; left:10%; width:80%; background:white; color:black; padding:15px; border-radius:10px; display:none; z-index:1000;}
-#popup button {margin-top:10px; padding:5px 10px;}
+a:link:hover{
+display:none
+color:#ff0000; 
+font-size:200px;
+}
+
+
+nav {
+  overflow: hidden;
+  display:inline-block;
+  margin-right:20px;
+}
+nav a {
+ float:left;
+ display:block;
+ text-align:center;
+ padding:10px;
+ text-decoration:none;
+}
 </style>
 </head>
 
-<body>
 
+<nav style="font-size:40px;">
+ <a href="document one.html">Home</a>
+ <a href="document two.html">First Quarter</a>
+ <a href="document three.html">Second Quarter</a>
+ <a href="about.html">About</a>
+</nav>
 
-<h3 id="score">Score: 0</h3>
-
-<div id="items"></div>
-
-<h3>Categories</h3>
-<div id="categories">
-<div class="category" data-type="hardware">Hardware</div>
-<div class="category" data-type="software">Software</div>
-<div class="category" data-type="threat">Threat</div>
-<div class="category" data-type="internet">Internet</div>
-</div>
-
-<div id="popup">
-<p id="definition"></p>
-<button onclick="closePopup()">Close</button>
-</div>
-
-<script>
-let score=0;
-
-const data=[
-{name:"Keyboard",type:"hardware",def:"A device used to input text into a computer."},
-{name:"Mouse",type:"hardware",def:"A pointing device for interacting with the computer."},
-{name:"Monitor",type:"hardware",def:"The screen used to display information."},
-{name:"Microsoft Word",type:"software",def:"A word processing software to create documents."},
-{name:"Browser",type:"software",def:"A software to access the internet."},
-{name:"Virus",type:"threat",def:"A program that can harm your computer."},
-{name:"Hacker",type:"threat",def:"Someone who tries to access your computer illegally."},
-{name:"Malware",type:"threat",def:"Malicious software designed to damage devices."},
-{name:"Internet",type:"internet",def:"A global network connecting millions of computers."},
-{name:"Wi-Fi",type:"internet",def:"A technology to connect devices wirelessly to internet."},
-{name:"Phishing",type:"threat",def:"Tricking someone to give personal info online."},
-{name:"USB",type:"hardware",def:"A device to store and transfer data."},
-{name:"Antivirus",type:"software",def:"Software that protects your computer from threats."}
-];
-
-const itemsDiv=document.getElementById("items");
-const categories=document.querySelectorAll(".category");
-const popup=document.getElementById("popup");
-const defText=document.getElementById("definition");
-
-function loadItems(){
-itemsDiv.innerHTML="";
-data.forEach((item,i)=>{
-let div=document.createElement("div");
-div.className="item";
-div.draggable=true;
-div.innerHTML=item.name;
-div.dataset.index=i;
-
-div.addEventListener("dragstart",dragStart);
-itemsDiv.appendChild(div);
-});
-}
-
-function dragStart(e){
-e.dataTransfer.setData("text",e.target.dataset.index);
-}
-
-categories.forEach(cat=>{
-cat.addEventListener("dragover",e=>e.preventDefault());
-cat.addEventListener("drop",dropItem);
-});
-
-function dropItem(e){
-e.preventDefault();
-let idx=e.dataTransfer.getData("text");
-let item=data[idx];
-let catType=e.currentTarget.dataset.type;
-
-if(item.type==catType){
-score+=2;
-document.getElementById("score").innerHTML="Score: "+score;
-showPopup(item.def);
-}else{
-score-=1;
-document.getElementById("score").innerHTML="Score: "+score;
-alert("Wrong category!");
-}
-
-// remove item from array
-data.splice(idx,1);
-loadItems();
-
-if(data.length==0){
-let msg=score>=15?"🏆 MISSION COMPLETE!":"💀 Try Again!";
-setTimeout(()=>{document.body.innerHTML="<h1>"+msg+"</h1><h2>Score: "+score+"</h2><button onclick='location.reload()'>Play Again</button>";},200);
-}
-}
-
-function showPopup(text){
-defText.innerHTML=text;
-popup.style.display="block";
-}
-
-function closePopup(){popup.style.display="none";}
-
-loadItems();
-</script>
-
-</body>
-</html>
-
+<body style="background-color: lightblue; text-align:center;">
